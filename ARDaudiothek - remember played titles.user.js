@@ -44,6 +44,7 @@
         }
         if(save){
             localStorage.setItem("titlesPlayed", JSON.stringify(played));
+            markPlayedThumbs();
         }
     },1000);
 
