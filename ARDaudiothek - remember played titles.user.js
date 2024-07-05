@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ARDaudiothek - remember played titles
 // @namespace    https://1fckeller.de/
-// @version      2024-07-04
+// @version      2024-07-05
 // @description  save and mark all paid titles so you can keep track of which episodes you already listened
 // @author       Daniel Vogel
 // @match        https://www.ardaudiothek.de/*
@@ -14,9 +14,9 @@
 
     let dlIndex=0;
     let played = JSON.parse(localStorage.getItem("titlesPlayed"))||[];
+    let lastLocation='';
 
-    markPlayedThumbs();
-    setTimeout(markPlayedThumbs, 1000);
+
     setTimeout(markPlayedThumbs, 2000);
 
 
@@ -44,6 +44,11 @@
         }
         if(save){
             localStorage.setItem("titlesPlayed", JSON.stringify(played));
+            markPlayedThumbs();
+        }
+
+        if(location.href!=lastLocation){
+            lastLocation=location.href;
             markPlayedThumbs();
         }
     },1000);
