@@ -1,6 +1,6 @@
 # ARDaudiothek remember played
 
-Das Userscript erkennt wenn ein Titel bis zum Ende abgespielt wurde und speichert diese Information im Browser.
+Das Userscript erkennt wenn ein Titel auf https://www.ardaudiothek.de/ bis zum Ende abgespielt wurde und speichert diese Information im Browser.
 Die bereits abgespielten Titel werden markiert, sodass man einen besseren Überblick über bereits abgespielte Folgen erhält.
 
 ## Installation
